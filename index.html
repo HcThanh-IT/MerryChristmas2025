@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christmas Card 🧑‍🎄</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="rotate-warning">
+    <div>
+      <p>Vui lòng xoay ngang màn hình để xem album Giáng Sinh 🎄</p>
+    </div>
+  </div>
+  <div class="star-field"></div>
+  <div class="scene-container">
+    <div class="book" id="book"></div>
+    <img src="https://i.pinimg.com/originals/7f/1f/76/7f1f76ac29bc01ad318abbf0468b1062.gif" class="santa" alt="">
+    <img src="https://i.pinimg.com/originals/3a/76/f3/3a76f392d88fb01045ad8d5cfd2adfa1.gif" class="santa-dog" alt="">
+    <img src="https://i.pinimg.com/originals/36/8c/76/368c767c1328f4877ea62f31181d6712.gif" class="snow-man" alt="">
+    <img src="https://i.pinimg.com/originals/33/c7/92/33c792633b93a8581b2741f767664b58.gif" class="santa-tree" alt="">
+    <img src="https://i.pinimg.com/originals/a8/7a/d0/a87ad02139647e69ddd8e0bc47a3bb2d.gif" class="bear" alt="">
+    <img src="https://i.pinimg.com/originals/70/72/bd/7072bd2c7b54da609fe9775752f9c3cd.gif" class="cat" alt="">
+  </div>
+
+  
+
+  <style>
+#photoSection { 
+    width:100%; 
+    margin-top:40px; 
+    display:none; 
+}
+
+.photo-row { 
+    white-space:nowrap; 
+    overflow:hidden; 
+    display:flex; 
+    gap:20px; 
+    padding:30px 0; 
+}
+
+.photo-row img { 
+    height:150px; 
+    width:150px; 
+    object-fit:cover; 
+    border-radius:12px; 
+}
+
+/* Hàng 1: bắt đầu từ PHẢI → chạy sang trái */
+.row1 { 
+    animation: slideLeft 40s linear infinite; 
+}
+
+/* Hàng 2: bắt đầu từ TRÁI → chạy sang phải */
+.row2 { 
+    animation: slideRight 20s linear infinite; 
+}
+
+/* HÀNG TRÊN: từ phải → trái */
+@keyframes slideLeft {
+    0%   { transform: translateX(100%); }    /* bắt đầu ngoài mép phải */
+    100% { transform: translateX(-100%); }   /* chạy qua hết sang trái */
+}
+
+/* HÀNG DƯỚI: từ trái → phải */
+@keyframes slideRight {
+    0%   { transform: translateX(-100%); }   /* bắt đầu ngoài mép trái */
+    100% { transform: translateX(100%); }    /* chạy qua hết sang phải */
+}
+</style>
+
+<div id="photoSection">
+    <div class="photo-row row1">
+        <img src="./img/2.jpg"><img src="./img/4.jpg"><img src="./img/6.jpg">
+        <img src="./img/8.jpg"><img src="./img/10.jpg"><img src="./img/12.jpg">
+        <img src="./img/3.jpg"><img src="./img/5.jpg"><img src="./img/7.jpg">
+        <img src="./img/9.jpg"><img src="./img/11.jpg"><img src="./img/12.jpg">
+        <img src="./img/10.jpg">
+    </div>
+
+    <div class="photo-row row2">
+        <img src="./img/2.jpg"><img src="./img/5.jpg"><img src="./img/7.jpg">
+        <img src="./img/6.jpg"><img src="./img/3.jpg"><img src="./img/10.jpg">
+        <img src="./img/8.jpg"><img src="./img/4.jpg"><img src="./img/12.jpg">
+        <img src="./img/2.jpg"><img src="./img/10.jpg"><img src="./img/11.jpg">
+        <img src="./img/3.jpg"> 
+    </div>
+</div>
+<!-- <script>
+document.addEventListener("DOMContentLoaded",()=>{
+    const btn=document.getElementById("showButton");
+    if(btn){
+        btn.addEventListener("click",()=>{
+            const p=document.getElementById("photoSection");
+            if(p) p.style.display="block";
+        });
+    }
+});
+</script> -->
+
+<audio id="sound" autoplay loop>
+    <source src="./style/nhac.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="./style/script.js"></script>
+
+</body>
+</html>
